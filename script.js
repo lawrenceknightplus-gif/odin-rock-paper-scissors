@@ -32,6 +32,7 @@ function playRound(playerChoice, computersChoice){
   // if player or computer won return winner msg
   if(playersScore === maxScore|| computersScore === maxScore){
     alert(`Winner is ${playersScore === maxScore ? "player" : "computer"}`)
+    startGame()
   }
 
   // check who won the round 
@@ -46,7 +47,7 @@ function playRound(playerChoice, computersChoice){
     playersScore++
     alert(`player won this round currentscore : ${playersScore}`)
   }
-  else if(playerChoice === "paper" && computersChoice === "rock"){
+  if(playerChoice === "paper" && computersChoice === "rock"){
     computersScore++
     alert(`player won this round currentscore : ${computersScore}`)
 
@@ -58,7 +59,7 @@ function playRound(playerChoice, computersChoice){
 
 
   }
-  else if(playerChoice === "scissors" && computersChoice === "paper"){
+  if(playerChoice === "scissors" && computersChoice === "paper"){
         computersScore++
     alert(`player won this round currentscore : ${computersScore}`)
 
@@ -71,25 +72,25 @@ function playRound(playerChoice, computersChoice){
 
 
   }
-  else if(playerChoice === "rock" && computersChoice === "scissors"){
+  if(playerChoice === "rock" && computersChoice === "scissors"){
         computersScore++
     alert(`player won this round currentscore : ${computersScore}`)
 
-
-  }
-
-  
+  }  
 }
-
-// playRound(getPlayersChoice(), getComputersChoice())
-
-
 
 // start game
   // get computer and players score
   // play a round
   // reset game
+startGame()
+function startGame(){
+  playRound(getPlayersChoice(), getComputersChoice())
+}
 
 // reset game
   // player and computers score
-
+function resetGame(){
+  playersScore = 0
+  computersScore = 0
+}
