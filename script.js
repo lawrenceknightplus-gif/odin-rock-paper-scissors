@@ -10,11 +10,11 @@ const getComputersChoice = () =>{
 
 // get players choice
 const getPlayersChoice = () => {
-    let playersChoice = prompt("Enter your choice")
+    let playersChoice = prompt("Enter your choice").toLowerCase()
     console.log(playersChoice)
 
 
-    return playersChoice.toLowerCase()
+    return playersChoice
 }
 
 
@@ -85,7 +85,11 @@ function playRound(playerChoice, computersChoice){
   // reset game
 startGame()
 function startGame(){
+  resetGame()
+  
+  while(playersScore <= 3|| computersScore <= 3){
   playRound(getPlayersChoice(), getComputersChoice())
+  }
 }
 
 // reset game
