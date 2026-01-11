@@ -89,7 +89,7 @@ startGame()
 function startGame(){
   resetGame()
   
-  while(playersScore <= 3|| computersScore <= 3){
+  while(playersScore <= maxScore|| computersScore <= maxScore){
   playRound(getPlayersChoice(), getComputersChoice())
   }
 }
