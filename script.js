@@ -1,5 +1,16 @@
 // get computers choice
+
+const getComputersChoice = () =>{
+    let choices = ["rock", "paper", "scissors"]
+    let randmonChoice = Math.floor(Math.random() * choices.length)
+    console.log(choices[randmonChoice])
+
+    return choices[randmonChoice]
+} 
+
+getComputersChoice()
 // get players choice
+
 
 // set computers && players score in a veriable
 
