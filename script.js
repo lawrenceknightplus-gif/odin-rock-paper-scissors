@@ -23,12 +23,14 @@ const getPlayersChoice = () => {
 let computersScore = 0
 let playersScore = 0
 
+// set max rounds veriable
+let maxScore = 3
+
 
 // play a round
 
 function playRound(playerChoice, computersChoice){
   // check if player or computer score is === maxscore
-  let maxScore = 3
   // if player or computer won return winner msg
   if(playersScore === maxScore|| computersScore === maxScore){
     alert(`Winner is ${playersScore === maxScore ? "player" : "computer"}`)
