@@ -49,7 +49,7 @@ function playRound(playerChoice, computersChoice){
   }
   if(playerChoice === "paper" && computersChoice === "rock"){
     computersScore++
-    alert(`player won this round currentscore : ${computersScore}`)
+    alert(`computer won this round currentscore : ${computersScore}`)
 
   }
 
@@ -61,7 +61,7 @@ function playRound(playerChoice, computersChoice){
   }
   if(playerChoice === "scissors" && computersChoice === "paper"){
         computersScore++
-    alert(`player won this round currentscore : ${computersScore}`)
+    alert(`computer won this round currentscore : ${computersScore}`)
 
 
   }
@@ -74,7 +74,7 @@ function playRound(playerChoice, computersChoice){
   }
   if(playerChoice === "rock" && computersChoice === "scissors"){
         computersScore++
-    alert(`player won this round currentscore : ${computersScore}`)
+    alert(`computer won this round currentscore : ${computersScore}`)
 
   }  
 }
