@@ -20,6 +20,8 @@ const getPlayersChoice = () => {
 
 
 // set computers && players score in a veriable
+let computersScore = 0
+let playersScore = 0
 
 
 // play a round
