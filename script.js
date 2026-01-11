@@ -8,8 +8,15 @@ const getComputersChoice = () =>{
     return choices[randmonChoice]
 } 
 
-getComputersChoice()
 // get players choice
+const getPlayersChoice = () => {
+    let playersChoice = prompt("Enter your choice")
+    console.log(playersChoice)
+
+
+    return playersChoice
+}
+
 
 
 // set computers && players score in a veriable
