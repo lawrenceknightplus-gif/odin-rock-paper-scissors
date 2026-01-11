@@ -14,7 +14,7 @@ const getPlayersChoice = () => {
     console.log(playersChoice)
 
 
-    return playersChoice
+    return playersChoice.toLowerCase()
 }
 
 
@@ -31,6 +31,9 @@ let playersScore = 0
  // check who won the round 
  // if player won return player won and increment player score
  // else return computer won and increment computers score
+function playRound(playerChoice, computersChoice){
+
+}
 
 
 
