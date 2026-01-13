@@ -87,7 +87,7 @@ const updateScore = (score) => {
       break;
     case "computer":
       computersScore++;
-      computerScoreEl.textContent = computerScoreEl
+      computerScoreEl.textContent = computersScore
       break;
   }
 };
@@ -102,7 +102,9 @@ const displayResult = (roundWinner) => {
 // player and computers score
 function resetGame() {
   playersScore = 0;
+  playerScoreEl.textContent = 0
   computersScore = 0;
+  computerScoreEl.textContent =0
 }
 
 choiceBtns.forEach((choice) => {
