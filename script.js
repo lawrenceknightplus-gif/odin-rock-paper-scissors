@@ -89,19 +89,6 @@ function playRound(playerChoice, computersChoice){
   }  
 }
 
-// start game
-  // get computer and players score
-  // play a round
-  // reset game
-startGame()
-function startGame(){
-  resetGame()
-  
-  while(playersScore <= maxScore|| computersScore <= maxScore){
-  playRound(getPlayersChoice(), getComputersChoice())
-  }
-}
-
 // reset game
   // player and computers score
 function resetGame(){
