@@ -39,9 +39,8 @@ function playRound(playerChoice, computersChoice) {
   // if player or computer won return winner msg
   if (playersScore === maxScore|| computersScore === maxScore) {
     resultEl.textContent = (`Winner is ${playersScore === maxScore ? "player" : "computer"}`);
-
+    choiceBtns.forEach(btn => btn.disabled = true)
     resetGame()
-
     return
   }
 
