@@ -1,3 +1,11 @@
+const playerScoreEl = document.getElementById("playerscore")
+const computerScoreEl = document.getElementById("computerscore")
+const roundEl = document.getElementById("curren-round")
+const resultEl = document.getElementById("result")
+
+const choiceBtns = document.querySelectorAll('.choice-btn')
+
+
 // get computers choice
 
 const getComputersChoice = () =>{
