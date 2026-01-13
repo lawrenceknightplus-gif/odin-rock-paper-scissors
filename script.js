@@ -17,13 +17,12 @@ const getComputersChoice = () =>{
 } 
 
 // get players choice
-const getPlayersChoice = () => {
-    let playersChoice = prompt("Enter your choice").toLowerCase()
-    console.log(playersChoice)
-
-
+const getPlayersChoice = (e) => {
+    let playersChoice = e.target.textContent.toLowerCase()
     return playersChoice
 }
+
+
 
 
 
