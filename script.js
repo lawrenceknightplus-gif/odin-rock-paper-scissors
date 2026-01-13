@@ -1,6 +1,6 @@
 const playerScoreEl = document.getElementById("player-score");
 const computerScoreEl = document.getElementById("computer-score");
-const roundEl = document.getElementById("curren-round");
+const roundEl = document.getElementById("current-round");
 const resultEl = document.getElementById("result");
 
 const choiceBtns = document.querySelectorAll(".choice-btn");
@@ -37,9 +37,9 @@ let rounds = 0
 function playRound(playerChoice, computersChoice) {
   // check if player or computer score is === maxscore
   // if player or computer won return winner msg
-  if (playersScore === maxScore|| computersScore === maxScore) {
+  if (playersScore === maxScore  || computersScore === maxScore ) {
+        choiceBtns.forEach(btn => btn.disabled = true)
     resultEl.textContent = (`Winner is ${playersScore === maxScore ? "player" : "computer"}`);
-    choiceBtns.forEach(btn => btn.disabled = true)
     resetGame()
     return
   }
