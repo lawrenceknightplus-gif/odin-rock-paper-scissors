@@ -35,8 +35,8 @@ function playRound(playerChoice, computersChoice) {
   // check if player or computer score is === maxscore
   // if player or computer won return winner msg
   if (playersScore === maxScore || computersScore === maxScore) {
-    alert(`Winner is ${playersScore === maxScore ? "player" : "computer"}`);
-    startGame();
+    resultEl.textContent = (`Winner is ${playersScore === maxScore ? "player" : "computer"}`);
+    resetGame()
   }
 
   // check who won the round
@@ -44,7 +44,7 @@ function playRound(playerChoice, computersChoice) {
   // else return computer won and increment computers score
 
   if (playerChoice === computersChoice) {
-    alert(`draw no one gets a point`);
+    resultEl.textContent = (`draw no one gets a point`);
   }
 
   if (playerChoice === "rock" && computersChoice === "paper") {
