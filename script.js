@@ -85,6 +85,7 @@ function playRound(playerChoice, computersChoice) {
   }
 
   rounds++
+  roundEl.textContent = rounds
 }
 
 const updateScore = (score) => {
@@ -115,6 +116,7 @@ function resetGame() {
   computersScore = 0;
   computerScoreEl.textContent =0
   rounds = 0
+  roundEl.textContent = 0
 }
 
 choiceBtns.forEach((choice) => {
