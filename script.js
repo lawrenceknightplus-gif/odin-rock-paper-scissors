@@ -29,6 +29,9 @@ let playersScore = 0;
 // set max rounds veriable
 let maxScore = 3;
 
+// set rounds veriable
+let rounds = 0
+
 // play a round
 
 function playRound(playerChoice, computersChoice) {
@@ -80,6 +83,8 @@ function playRound(playerChoice, computersChoice) {
     displayResult("computer")
 
   }
+
+  rounds++
 }
 
 const updateScore = (score) => {
@@ -109,6 +114,7 @@ function resetGame() {
   playerScoreEl.textContent = 0
   computersScore = 0;
   computerScoreEl.textContent =0
+  rounds = 0
 }
 
 choiceBtns.forEach((choice) => {
