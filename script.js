@@ -1,5 +1,5 @@
-const playerScoreEl = document.getElementById("playerscore");
-const computerScoreEl = document.getElementById("computerscore");
+const playerScoreEl = document.getElementById("player-score");
+const computerScoreEl = document.getElementById("computer-score");
 const roundEl = document.getElementById("curren-round");
 const resultEl = document.getElementById("result");
 
@@ -83,9 +83,11 @@ const updateScore = (score) => {
   switch (score) {
     case "player":
       playersScore++;
+      playerScoreEl.textContent = playersScore
       break;
     case "computer":
       computersScore++;
+      computerScoreEl.textContent = computerScoreEl
       break;
   }
 };
@@ -104,5 +106,7 @@ function resetGame() {
 }
 
 choiceBtns.forEach((choice) => {
-  choice.addEventListener("click", getPlayersChoice);
+  choice.addEventListener("click", (e) => {
+    playRound(getPlayersChoice(e), getComputersChoice())
+  });
 });
