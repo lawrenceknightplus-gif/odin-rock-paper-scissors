@@ -34,9 +34,12 @@ let maxScore = 3;
 function playRound(playerChoice, computersChoice) {
   // check if player or computer score is === maxscore
   // if player or computer won return winner msg
-  if (playersScore === maxScore || computersScore === maxScore) {
+  if (playersScore === maxScore|| computersScore === maxScore) {
     resultEl.textContent = (`Winner is ${playersScore === maxScore ? "player" : "computer"}`);
+
     resetGame()
+
+    return
   }
 
   // check who won the round
@@ -90,6 +93,7 @@ const updateScore = (score) => {
       computerScoreEl.textContent = computersScore
       break;
   }
+
 };
 
 const displayResult = (roundWinner) => {
